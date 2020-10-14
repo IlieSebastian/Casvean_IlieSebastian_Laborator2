@@ -15,5 +15,12 @@ namespace Casvean_IlieSebastian_Laborator2.DataAccess
         public DbSet<Order> Orders { get; set; }
         public DbSet<Book> Books { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Customer>().ToTable("Customer");
+            modelBuilder.Entity<Book>().ToTable("Book");
+            modelBuilder.Entity<Order>().ToTable("Order");
+        }
+
     }
 }

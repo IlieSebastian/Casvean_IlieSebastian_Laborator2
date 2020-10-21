@@ -12,6 +12,7 @@ namespace Casvean_IlieSebastian_Laborator2.Models
         public int BookID { get; set; }
         public Book Book { get; set; }
         public Customer Customer { get; set; }
+        public DateTime OrderData { get; set; }
 
     }
 }
